@@ -1,0 +1,20 @@
+﻿@model IList<Winner>
+@{
+    ViewBag.Title = "Summary Screen";
+}
+
+<div class="text-center mt-5 mb-3">
+    <h2 class="display-4 mb-3">Your winner's profile</h2>
+    @if (Model.Any())
+    {
+        var lastWinner = Model.Last();
+        <div class="mb-5">
+            <partial name="WinnerCardPartial" model="lastWinner" />
+        </div>
+    }
+    <h2 class="display-4 mt-5 mb-3">About the author</h2>
+    <p>Camille Gouault--Lamour is an aspiring ASP .NET Core developer.</p>
+
+    <button class="btn btn-primary" onclick="window.location.href='@Url.Action("Index", "Home")'">Go to the HomePage</button>
+</div>
+

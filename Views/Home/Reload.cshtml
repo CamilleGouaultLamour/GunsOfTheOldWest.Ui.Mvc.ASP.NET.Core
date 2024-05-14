@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Reload Screen";
+}
+
+<div class="container mt-5">
+    <h2 class="display-4 mb-5">Reload!</h2>
+
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-3 mt-3">
+            <form method="post">                                           
+                <button class="btn btn-lg btn-block btn-reload" formaction="@Url.Action("BuyBullets", "Home", new { numberOfBullets = 2})">Buy 2 bullets for €1</button>
+            </form>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-3 mt-3">
+            <form method="post">
+                <button class="btn btn-lg btn-block btn-reload" formaction="@Url.Action("BuyBullets", "Home", new { numberOfBullets = 7})">Buy 7 bullets for €4</button>
+            </form>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-3 mt-3">
+            <form method="post">
+                <button class="btn btn-lg btn-block btn-reload" formaction="@Url.Action("BuyBullets", "Home", new { numberOfBullets = 12})">Buy 12 bullets for €7</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    .container {
+        margin-top: 50px;
+    }
+
+    .btn-reload {
+        width: 300px;
+        border: 5px solid darkgray;
+        border-radius: 0;
+        background-color: #C0C0C0;
+    }
+</style>

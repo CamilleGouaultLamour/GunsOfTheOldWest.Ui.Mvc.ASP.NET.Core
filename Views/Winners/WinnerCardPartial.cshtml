@@ -1,0 +1,14 @@
+﻿@model Winner
+
+<div class="card" style="background-color: transparent; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
+    <div class="card-header">
+        @Model.FirstName @Model.LastName
+    </div>
+    <div class="card-body">
+        <p class="card-text">@Model.Email</p>
+        <p class="card-text">@Model.PhoneNumber</p>
+    </div>
+    <div class="card-footer">
+        <p class="card-text">Submitted on: @Model.SubmissionDate</p>
+    </div>
+</div>

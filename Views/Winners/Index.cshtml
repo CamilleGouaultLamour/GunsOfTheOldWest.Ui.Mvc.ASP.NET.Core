@@ -1,0 +1,15 @@
+﻿@model Winner
+@{
+    ViewBag.Title = "Winner Screen";
+}
+
+<div class="text-center mt-5 mb-3">
+    <h1>Sniper!</h1>
+</div>
+
+<partial name="WinnerRegistrationFormPartial" model="Model" />
+    
+
+<div class="text-center mt-5 mb-3">
+    <button class="btn btn-primary" onclick="window.location.href='@Url.Action("Index", "Home")'">Go to the HomePage</button>
+</div>

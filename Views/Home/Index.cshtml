@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "_Layout";
+}
+
+
+<div class="centered-container">
+    <h1 class="display-1 mb-3">Guns of the Old West</h1>
+
+    <form method="post">
+        <button class="round-btn" formaction="@Url.Action("Fire", "Home")"></button>
+    </form>
+
+    @if (@ViewBag.Bullets > 0)
+    {
+        <p class="display-6 mt-3">@ViewBag.Bullets more bullets</p>
+    }
+    @if (@ViewBag.Bullets == 0)
+    {
+        <p class="display-6 mt-3">No more bullets</p>
+    }
+</div>
+
+<style>
+    .centered-container {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .round-btn {
+        width: 100px;
+        height: 100px;
+        border: 5px solid darkgray;
+        border-radius: 50%;
+        background-color: #C0C0C0;
+    }
+</style>
